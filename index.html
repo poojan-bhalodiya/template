@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel & Tourism</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-sans">
+    <!-- Navigation -->
+    <!-- In the navigation section, add user dropdown -->
+    <!-- Navigation modifications -->
+    <!-- Update Navigation colors -->
+    <!-- Primary: Rich Burgundy (#8B1F41) -->
+    <!-- Secondary: Warm Gold (#D4AF37) -->
+    <!-- Accent: Light Burgundy (#A84660) -->
+    <!-- Dark: Deep Burgundy (#590D22) -->
+    
+    <!-- Update Navigation -->
+    <nav class="bg-white fixed w-full z-10 shadow-md">
+        <div class="container mx-auto px-6 py-4">
+            <!-- Navigation section -->
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-[#efa62a]">TravelWorld</div>
+                <div class="hidden md:flex space-x-6">
+                    <!-- Navigation links -->
+                    <a href="#home" class="hover:text-[#8B1F41]">Home</a>
+                    <a href="#packages" class="hover:text-[#8B1F41]">Packages</a>
+                    <a href="#hotels" class="hover:text-[#8B1F41]">Hotels</a>
+                    <a href="#about" class="hover:text-[#8B1F41]">About</a>
+                    <!-- Update dropdown hover colors -->
+                    <div class="relative group">
+                        <button class="flex items-center hover:text-[#00A699]">
+                            <i class="fas fa-user mr-2"></i>
+                            Account
+                        </button>
+                        <div class="absolute right-0 w-48 py-2 mt-2 bg-white rounded-lg shadow-xl hidden group-hover:block">
+                            <a href="#" class="block px-4 py-2 hover:bg-[#00A699] hover:text-white">Login</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-[#00A699] hover:text-white">Register</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-[#00A699] hover:text-white">My Bookings</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Update all buttons and accent colors throughout the file -->
+    <!-- Replace these classes everywhere -->
+    class="bg-blue-600" → class="bg-[#8B1F41]"
+    class="hover:bg-blue-700" → class="hover:bg-[#590D22]"
+    class="text-blue-600" → class="text-[#8B1F41]"
+    
+
+  
+    <!-- Add this before closing body tag -->
+  
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden fixed w-full bg-white shadow-md z-9">
+        <div class="container mx-auto px-6 py-4">
+            <a href="#home" class="block py-2 hover:text-[#8B1F41]">Home</a>
+            <a href="#destinations" class="block py-2 hover:text-[#8B1F41]">Destinations</a>
+            <a href="#packages" class="block py-2 hover:text-blue-600">Packages</a>
+            <a href="#hotels" class="block py-2 hover:text-blue-600">Hotels</a>
+            <a href="#planner" class="block py-2 hover:text-blue-600">Trip Planner</a>
+            <a href="#about" class="block py-2 hover:text-blue-600">About</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="h-screen relative overflow-hidden">
+        <div class="carousel relative h-full">
+            <div class="carousel-item absolute w-full h-full bg-cover bg-center transition-opacity duration-1000" style="background-image: url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1');">
+                <div class="h-full bg-black bg-opacity-50 flex items-center">
+                    <div class="container mx-auto px-6 text-white">
+                        <h1 class="text-5xl md:text-6xl font-bold mb-4">Explore Paradise</h1>
+                        <p class="text-xl mb-8">Your dream vacation awaits</p>
+                        <button class="bg-[#efa62a] hover:bg-[#d98e26]s text-white px-8 py-3 rounded-full">
+                            Start Your Journey
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item absolute w-full h-full bg-cover bg-center opacity-0 transition-opacity duration-1000" style="background-image: url('https://images.unsplash.com/photo-1502920917128-1aa500764cbd');">
+                <div class="h-full bg-black bg-opacity-50 flex items-center">
+                    <div class="container mx-auto px-6 text-white">
+                        <h1 class="text-5xl md:text-6xl font-bold mb-4">Discover Beauty</h1>
+                        <p class="text-xl mb-8">Experience the world's most stunning locations</p>
+                        <button class="bg-[#efa62a] hover:bg-[#d98e26] text-white px-8 py-3 rounded-full">
+                            Explore Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item absolute w-full h-full bg-cover bg-center opacity-0 transition-opacity duration-1000" style="background-image: url('https://images.unsplash.com/photo-1493246507139-91e8fad9978e');">
+                <div class="h-full bg-black bg-opacity-50 flex items-center">
+                    <div class="container mx-auto px-6 text-white">
+                        <h1 class="text-5xl md:text-6xl font-bold mb-4">Adventure Calls</h1>
+                        <p class="text-xl mb-8">Create memories that last forever</p>
+                        <button class="bg-[#efa62a] hover:bg-[#d98e26] text-white px-8 py-3 rounded-full">
+                            Begin Adventure
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Update the JavaScript for auto carousel -->
+    <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        }
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Animation for cards
+        const allCards = document.querySelectorAll('.destination-card, .package-card, .hotel-card');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        });
+        
+        allCards.forEach(card => {
+            card.style.opacity = 0;
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'all 0.5s ease-out';
+            observer.observe(card);
+        });
+
+        // Hero Carousel Auto-rotation
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-item');
+        
+        function showSlide(index) {
+            slides.forEach(slide => slide.style.opacity = '0');
+            currentSlide = (index + slides.length) % slides.length;
+            slides[currentSlide].style.opacity = '1';
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        // Auto advance slides every 5 seconds
+        setInterval(nextSlide, 5000);
+        showSlide(0);
+    </script>
+
+    <!-- Quick Packages Preview -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-8">Featured Packages</h2>
+            <div class="relative">
+                <div class="overflow-hidden">
+                    <div class="flex transition-transform duration-500 ease-in-out" id="packagesSlider">
+                        <!-- First Row of Packages -->
+                        <div class="flex-none w-full grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <!-- Original 3 packages remain the same -->
+                            <div class="package-card bg-white rounded-lg shadow-lg overflow-hidden border">
+                                <div class="relative">
+                                    <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b" class="w-full h-48 object-cover">
+                                    <span class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full">Best Seller</span>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">European Dream</h3>
+                                    <p class="text-gray-600 mb-4">10 Days | 4 Countries</p>
+                                    <!-- Package cards with updated colors -->
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-2xl font-bold text-[#efa62a]">$2499</span>
+                                        <button class="bg-[#efa62a] text-white px-4 py-2 rounded-lg hover:bg-[#d98e26]">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="package-card bg-white rounded-lg shadow-lg overflow-hidden border">
+                                <div class="relative">
+                                    <img src="https://images.unsplash.com/photo-1536599018102-9f803c140fc1" class="w-full h-48 object-cover">
+                                    <span class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full">20% Off</span>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">Asian Explorer</h3>
+                                    <p class="text-gray-600 mb-4">12 Days | 3 Countries</p>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-2xl font-bold text-[#efa62a]">$2499</span>
+                                        <button class="bg-[#efa62a] text-white px-4 py-2 rounded-lg hover:bg-[#d98e26]">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="package-card bg-white rounded-lg shadow-lg overflow-hidden border">
+                                <div class="relative">
+                                    <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2" class="w-full h-48 object-cover">
+                                    <span class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full">New</span>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">Island Paradise</h3>
+                                    <p class="text-gray-600 mb-4">7 Days | Maldives</p>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-2xl font-bold text-[#efa62a]">$3299</span>
+                                        <button class="bg-[#efa62a] text-white px-4 py-2 rounded-lg hover:bg-[#d98e26]">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Second Row of Packages -->
+                        <div class="flex-none w-full grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="package-card bg-white rounded-lg shadow-lg overflow-hidden border">
+                                <div class="relative">
+                                    <img src="https://images.unsplash.com/photo-1512100356356-de1b84283e18" class="w-full h-48 object-cover">
+                                    <span class="absolute top-4 right-4 bg-purple-500 text-white px-3 py-1 rounded-full">Premium</span>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">African Safari</h3>
+                                    <p class="text-gray-600 mb-4">8 Days | Kenya & Tanzania</p>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-2xl font-bold text-[#efa62a]">$4299</span>
+                                        <button class="bg-[#efa62a] text-white px-4 py-2 rounded-lg hover:bg-[#d98e26]">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Add 2 more package cards here following the same structure -->
+                        </div>
+
+                        <!-- Third Row of Packages -->
+                        <div class="flex-none w-full grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <!-- Add 3 more package cards here -->
+                        </div>
+
+                        <!-- Fourth Row of Packages -->
+                        <div class="flex-none w-full grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <!-- Add final 3 package cards here -->
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Navigation Arrows - update arrow colors -->
+                <button class="absolute left-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-lg hover:bg-gray-100 transform -translate-x-1/2" onclick="movePackages('prev')">
+                    <i class="fas fa-chevron-left text-[#efa62a]"></i>
+                </button>
+                <button class="absolute right-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-lg hover:bg-gray-100 transform translate-x-1/2" onclick="movePackages('next')">
+                    <i class="fas fa-chevron-right text-[#efa62a]"></i>
+                </button>
+
+                <!-- Dots Navigation -->
+                <div class="flex justify-center mt-8 space-x-2">
+                    <button class="w-2 h-2 rounded-full bg-[#efa62a]" onclick="showPackagePage(0)"></button>
+                    <button class="w-2 h-2 rounded-full bg-gray-300" onclick="showPackagePage(1)"></button>
+                    <button class="w-2 h-2 rounded-full bg-gray-300" onclick="showPackagePage(2)"></button>
+                    <button class="w-2 h-2 rounded-full bg-gray-300" onclick="showPackagePage(3)"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add this to your JavaScript section -->
+    <script>
+        let currentPackagePage = 0;
+        const packageSlider = document.getElementById('packagesSlider');
+        const packageDots = document.querySelectorAll('.flex.justify-center.mt-8 button');
+
+        function showPackagePage(index) {
+            currentPackagePage = index;
+            packageSlider.style.transform = `translateX(-${index * 100}%)`;
+            
+            // Update dots
+            packageDots.forEach((dot, i) => {
+                dot.classList.toggle('bg-blue-600', i === index);
+                dot.classList.toggle('bg-gray-300', i !== index);
+            });
+        }
+
+        function movePackages(direction) {
+            const newIndex = direction === 'next' 
+                ? (currentPackagePage + 1) % 4 
+                : (currentPackagePage - 1 + 4) % 4;
+            showPackagePage(newIndex);
+        }
+    </script>
+
+    <!-- Modified Destinations Section with more locations -->
+    <section id="destinations" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">Popular Destinations</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <!-- Keep existing destination cards and add these new ones -->
+                <div class="destination-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200" alt="Tokyo" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Tokyo, Japan</h3>
+                        <p class="text-gray-600">Modern city with ancient traditions.</p>
+                    </div>
+                </div>
+                <div class="destination-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1538097304804-2a1b932466a9" alt="Dubai" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Dubai, UAE</h3>
+                        <p class="text-gray-600">Luxury and architectural marvels.</p>
+                    </div>
+                </div>
+                <div class="destination-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9" alt="Santorini" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Santorini, Greece</h3>
+                        <p class="text-gray-600">Stunning sunsets and white architecture.</p>
+                    </div>
+                </div>
+                <div class="destination-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1595880200180-3fb32a5c235c" alt="Machu Picchu" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Machu Picchu, Peru</h3>
+                        <p class="text-gray-600">Ancient Incan citadel in the clouds.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New About Section (Add before Contact section) -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-12">About Us</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1464746133101-a2c3f88e0dd9" class="rounded-lg shadow-md w-full">
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4">Your Trusted Travel Partner</h3>
+                        <p class="text-gray-600 mb-6">With over a decade of experience in creating unforgettable journeys, we're passionate about helping you explore the world's most beautiful destinations. Our expert team ensures every trip is perfectly planned to match your dreams.</p>
+                        <!-- About section stats -->
+                        <div class="grid grid-cols-2 gap-6 mt-8">
+                            <div class="text-center p-4 bg-gray-50 rounded-lg">
+                                <div class="text-3xl font-bold text-[#ffc431]">15k+</div>
+                                <div class="text-gray-600">Happy Travelers</div>
+                            </div>
+                            <div class="text-center p-4 bg-gray-50 rounded-lg">
+                                <div class="text-3xl font-bold text-[#ffc431]">100+</div>
+                                <div class="text-gray-600">Destinations</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- About Section ends -->
+    </section>
+
+    <!-- Customer Reviews Section -->
+        <section class="py-20 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12">What Our Travelers Say</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                    <!-- Review Card 1 -->
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <div class="flex flex-col items-center text-center">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330" class="w-20 h-20 rounded-full object-cover mb-4">
+                            <h4 class="font-bold text-lg">Sarah Johnson</h4>
+                            <div class="flex text-yellow-400 my-2">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-gray-600 text-sm italic">"The trip to Bali was absolutely magical. Every detail was perfectly planned!"</p>
+                        </div>
+                    </div>
+    
+                    <!-- Review Card 2 -->
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <div class="flex flex-col items-center text-center">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d" class="w-20 h-20 rounded-full object-cover mb-4">
+                            <h4 class="font-bold text-lg">Michael Chen</h4>
+                            <div class="flex text-yellow-400 my-2">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p class="text-gray-600 text-sm italic">"European tour exceeded expectations. The local guides were exceptional!"</p>
+                        </div>
+                    </div>
+    
+                    <!-- Review Card 3 -->
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <div class="flex flex-col items-center text-center">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80" class="w-20 h-20 rounded-full object-cover mb-4">
+                            <h4 class="font-bold text-lg">Emma Wilson</h4>
+                            <div class="flex text-yellow-400 my-2">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-gray-600 text-sm italic">"Amazing safari experience in Africa. Unforgettable memories!"</p>
+                        </div>
+                    </div>
+    
+                    <!-- Review Card 4 -->
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <div class="flex flex-col items-center text-center">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e" class="w-20 h-20 rounded-full object-cover mb-4">
+                            <h4 class="font-bold text-lg">David Martinez</h4>
+                            <div class="flex text-yellow-400 my-2">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-gray-600 text-sm italic">"The Japan cultural tour was incredible. Every moment was special!"</p>
+                        </div>
+                    </div>
+    
+                    <!-- Review Card 5 -->
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <div class="flex flex-col items-center text-center">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb" class="w-20 h-20 rounded-full object-cover mb-4">
+                            <h4 class="font-bold text-lg">Sophie Anderson</h4>
+                            <div class="flex text-yellow-400 my-2">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-gray-600 text-sm italic">"Greek islands hopping was a dream come true. Perfect organization!"</p>
+                        </div>
+                    </div>
+    
+                    <!-- Review Card 6 -->
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <div class="flex flex-col items-center text-center">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a" class="w-20 h-20 rounded-full object-cover mb-4">
+                            <h4 class="font-bold text-lg">James Wilson</h4>
+                            <div class="flex text-yellow-400 my-2">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-gray-600 text-sm italic">"Maldives luxury package was worth every penny. Paradise found!"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Add this to your existing JavaScript section -->
+    <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        }
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Animation for cards
+        const allCards = document.querySelectorAll('.destination-card, .package-card, .hotel-card');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        });
+        
+        allCards.forEach(card => {
+            card.style.opacity = 0;
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'all 0.5s ease-out';
+            observer.observe(card);
+        });
+
+        // Reviews Carousel
+        let currentReview = 0;
+        const slider = document.getElementById('reviewsSlider');
+        const reviewButtons = document.querySelectorAll('.reviews-carousel button');
+
+        function showReview(index) {
+            currentReview = index;
+            slider.style.transform = `translateX(-${index * 100}%)`;
+            
+            // Update active button
+            reviewButtons.forEach((button, i) => {
+                button.classList.toggle('bg-blue-600', i === index);
+                button.classList.toggle('bg-gray-300', i !== index);
+            });
+        }
+
+        // Auto advance reviews every 5 seconds
+        setInterval(() => {
+            currentReview = (currentReview + 1) % 3;
+            showReview(currentReview);
+        }, 5000);
+
+        // Initialize first review
+        showReview(0);
+    </script>
+
+    <!-- Footer moved after Customer Reviews -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <!-- Company Info -->
+                <div>
+                    <h3 class="text-2xl font-bold text-[#efa62a] mb-6">TravelWorld</h3>
+                    <p class="text-gray-400 mb-4">Making your travel dreams come true with unforgettable experiences and personalized service.</p>
+                    <!-- Footer social media icons -->
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-[#ffb52e] hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-[#ffb52e] hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-[#ffb52e] hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-[#ffb52e] hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-[#590D22]">Home</a></li>
+                        <li><a href="#packages" class="text-gray-400 hover:text-[#590D22]">Packages</a></li>
+                        <li><a href="#hotels" class="text-gray-400 hover:text-[#590D22]">Hotels</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-[#590D22]">About Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Support</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-[#590D22]">FAQs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-[#590D22]">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-[#590D22]">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-[#590D22]">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Contact Info</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><i class="fas fa-map-marker-alt text-[#ffb52e] mr-2"></i> 123 Travel Street, City</li>
+                        <li><i class="fas fa-phone text-[#ffb52e] mr-2"></i> +1 234 567 8900</li>
+                        <li><i class="fas fa-envelope text-[#ffb52e] mr-2"></i> info@travelworld.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 TravelWorld. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    </body>
+</html>
